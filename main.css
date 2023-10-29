@@ -1,0 +1,126 @@
+html {
+  background: #000000 url(http://unsplash.it/1500/1000?image=881&blur=50);
+  background-size: cover;
+  font-family: "helvetica neue";
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.clock-numbers {
+  list-style: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.clock-numbers li {
+  position: relative;
+  width: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Adjust the position for each number */
+.clock-numbers li:nth-child(1) {
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.clock-numbers li:nth-child(2) {
+  top: calc(50% - 35vmin * cos(30deg));
+  left: calc(30% + 35vmin * sin(30deg));
+  transform: translateY(-30%);
+}
+.clock-numbers li:nth-child(3) {
+  top: 40%;
+  left: 90%;
+}
+.clock-numbers li:nth-child(4) {
+  top: 10%;
+  left: 95%;
+  transform: translateY(80%);
+}
+.clock-numbers li:nth-child(5) {
+  top: 10%;
+  left: 90%;
+  transform: translateY(150%);
+}
+.clock-numbers li:nth-child(6) {
+  top: 10%;
+  left: 75%;
+  transform: translateY(200%);
+}
+
+.clock-numbers li:nth-child(7) {
+  top: 10%;
+  left: 50%;
+  transform: translateY(200%);
+}
+.clock-numbers li:nth-child(8) {
+  top: 10%;
+  left: 20%;
+  transform: translateY(50%);
+}
+.clock-numbers li:nth-child(9) {
+  top: 20%;
+  left: 1%;
+  transform: translateY(-200%);
+}
+.clock-numbers li:nth-child(10) {
+  top: 10%;
+  left: -4%;
+  transform: translateY(-500%);
+}
+.clock-numbers li:nth-child(11) {
+  top: 20%;
+  left: 2%;
+  transform: translateY(-800%);
+}
+.clock-numbers li:nth-child(12) {
+  top: 20%;
+  left: 18%;
+  transform: translateY(-1030%);
+}
